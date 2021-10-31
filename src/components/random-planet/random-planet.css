@@ -5,8 +5,8 @@
   padding: 5px;
 }
 .random-planet .planet-image {
-  width: 30%;
-  height: 30%;
+  width: 20%;
+  height: 20%;
   border-radius: 10px;
 }
 .random-planet .list-group-item {
