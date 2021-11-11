@@ -3,6 +3,7 @@
   margin-top: 5px;
   flex-direction: row;
   padding: 5px;
+  margin-bottom: 3%;
 }
 .random-planet .planet-image {
   width: 20%;

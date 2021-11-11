@@ -8,18 +8,28 @@ import RandomPlanet from "../random-planet";
 import StarshipDetails from "../starship-details";
 
 export default class App extends Component {
+  state = {
+    selectedPerson: 5,
+  };
+
+  onPersonSelected = (id) => {
+    this.setState({
+      selectedPerson: id,
+    });
+  };
+
   render() {
     return (
-      <div>
+      <div className="stardb-app">
         <Header />
 
         <RandomPlanet />
         <div className="row mb2">
           <div className="col-md-6">
-            <ItemList />
+            <ItemList onItemSelected={this.onPersonSelected} />
           </div>
           <div className=" col-md-6">
-            <PersonDetails />
+            <PersonDetails personId={this.state.selectedPerson} />
           </div>
         </div>
 
