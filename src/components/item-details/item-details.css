@@ -1,15 +1,15 @@
-.person-details {
+.item-details {
   display: flex;
   flex-direction: row;
 }
-.person-details .person-image {
+.item-details .item-image {
   width: 30%;
   height: 30%;
   border-radius: 10px;
 }
-.person-details .list-group-item {
+.item-details .list-group-item {
   padding: 5px;
 }
-.person-details .list-group-item .term {
+.item-details .list-group-item .term {
   margin-right: 3px;
 }
