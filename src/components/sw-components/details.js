@@ -2,14 +2,17 @@ import React from "react";
 import ItemDetails from "../item-details";
 import { Record } from "../item-details/item-details";
 import { SwapiServiceConsumer } from "../swapi-service-context";
+import { useParams } from "react-router";
 
-const PersonDetails = ({ itemId }) => {
+const PersonDetails = () => {
+  let { id } = useParams();
+
   return (
     <SwapiServiceConsumer>
       {({ getPerson, getPersonImage }) => {
         return (
           <ItemDetails
-            itemId={itemId}
+            itemId={id}
             getData={getPerson}
             getImageUrl={getPersonImage}
           >
@@ -42,13 +45,15 @@ const PlanetDetails = ({ itemId }) => {
   );
 };
 
-const StarshipDetails = ({ itemId }) => {
+const StarshipDetails = () => {
+  let { id } = useParams();
+
   return (
     <SwapiServiceConsumer>
       {({ getStarships, getStarshipImage }) => {
         return (
           <ItemDetails
-            itemId={itemId}
+            itemId={id}
             getData={getStarships}
             getImageUrl={getStarshipImage}
           >
